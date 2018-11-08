@@ -1,0 +1,28 @@
+"istanbay-test" adında veritabanı oluştur.
+SQL KOMUTU:
+CREATE DATABASE istanbay-test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+--Aşağıdaki işlemleri takip ederek yada
+direkt "istanbay-test.sql" dosyasını veritabanına yükleyebilirsiniz.
+
+agencies adında tablo oluştur 5 kolon 
+id(int),
+name(varchar(255)),
+lat(double),
+lng(double),
+cord_total(double).
+
+SQL KOMUTU:
+CREATE TABLE `agencies` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `lat` double NOT NULL,
+  `lng` double NOT NULL,
+  `cord_total` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--.sql dosyasını yüklemediyseniz devam edin.
+localhost/istanbay-test/insert_agencies_to_sql.php çalıştırarak csv dosyasındaki listeyi veritabanına giriyoruz.
+
+-- Artık localhost/istanbay-test/index.php adresinden code testinin çalışır haline bakabiliriz.
+-- Dosyaların içinde yorum satırları ile kodların neler yaptığını yazdım.
