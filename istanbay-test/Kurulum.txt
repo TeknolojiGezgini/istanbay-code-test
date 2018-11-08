@@ -2,6 +2,12 @@
 SQL KOMUTU:
 CREATE DATABASE istanbay-test CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+Kullanıcı oluşturalım:
+isim: test
+şifre: mpRukc93A6RnMEGX
+SQL KOMUTU:
+CREATE USER 'test'@'localhost' IDENTIFIED WITH mysql_native_password AS 'mpRukc93A6RnMEGX';GRANT USAGE ON *.* TO 'test'@'localhost' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;GRANT ALL PRIVILEGES ON `istanbay-test`.* TO 'test'@'localhost';
+
 --Aşağıdaki işlemleri takip ederek yada
 direkt "istanbay-test.sql" dosyasını veritabanına yükleyebilirsiniz.
 
